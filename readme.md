@@ -3,7 +3,7 @@
 
 [webpack @github](https://github.com/webpack/webpack)
 
-````bash
+```
 npm install --save-dev webpack
 yarn add webpack --dev
 ```
@@ -16,7 +16,8 @@ https://www.git-tower.com/blog/git-cheat-sheet/
 https://github.com/academind
 https://academind.com/
 
-
+[demo project @github](https://github.com/Strong689/webpackdemo.git)
+[git change url](https://help.github.com/articles/changing-a-remote-s-url/)
 ## 1. Basic Demo
 
 * initial project, without webpack
@@ -24,7 +25,7 @@ https://academind.com/
 
 * Add webpack & modify js & index.html files
 
-````bash
+```
 npm init // first step package.json
 npm install --save-dev webpack // develop dependency
 npm run build  //last step
@@ -38,6 +39,25 @@ npm run build  //last step
     - dom-loader.js: export 
     - app.js: import {secretParagraph,secretButton} from './dom-loader';
     - index.html: <script src="dist/bundle.js"></script>
+
+
+
+* [Webpack Dev Server](https://github.com/webpack/webpack-dev-server)
+
+[issue http://127.0.0.1:8080/ vs http://localhost:8080/](https://github.com/webpack/webpack-dev-server/issues/183)
+
+````bash
+npm install --save-dev webpack-dev-server  
+```
+package.json, both works
+
+    - work: "build": "webpack-dev-server --entry ./src/js/app.js --output-filename ./dist/bundle.js", //with error: net::ERR_EMPTY_RESPONSE
+    - works: "build": "webpack-dev-server src/js/app.js dist/bundle.js", // no err
+    
+    "build": "webpack-dev-server --host localhost --port 3000 src/js/app.js dist/bundle.js",
+
+
+## Git commands
 
 ````bash
 git init webpackdemo
@@ -66,19 +86,12 @@ git add readme.md
 git commit -m "readme.md added"
 
 git tag -a v3.0 69dcb8 -m "webpack dev server & readme.md, localhost:3000 works"
-```
 
-* [Webpack Dev Server](https://github.com/webpack/webpack-dev-server)
+git config --global user.email "email@example.com"
+git remote -v
+//git remote set-url origin https://github.com/Strong689/webpackdemo.git
 
-[issue http://127.0.0.1:8080/ vs http://localhost:8080/](https://github.com/webpack/webpack-dev-server/issues/183)
+git push --help
+git remote add origin https://github.com/Strong689/webpackdemo
 
-````bash
-npm install --save-dev webpack-dev-server  
-```
-package.json, both works
-
-    - work: "build": "webpack-dev-server --entry ./src/js/app.js --output-filename ./dist/bundle.js", //with error: net::ERR_EMPTY_RESPONSE
-    - works: "build": "webpack-dev-server src/js/app.js dist/bundle.js", // no err
-    
-    "build": "webpack-dev-server --host localhost --port 3000 src/js/app.js dist/bundle.js",
-
+``` 
