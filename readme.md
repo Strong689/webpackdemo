@@ -40,8 +40,6 @@ npm run build  //last step
     - app.js: import {secretParagraph,secretButton} from './dom-loader';
     - index.html: <script src="dist/bundle.js"></script>
 
-
-
 * [Webpack Dev Server](https://github.com/webpack/webpack-dev-server)
 
 [issue http://127.0.0.1:8080/ vs http://localhost:8080/](https://github.com/webpack/webpack-dev-server/issues/183)
@@ -55,10 +53,28 @@ package.json, both works
     - works: "build": "webpack-dev-server src/js/app.js dist/bundle.js", // no err
     
     "build": "webpack-dev-server --host localhost --port 3000 src/js/app.js dist/bundle.js",
+* webpack.config.js
 
+```
+./node_modules/.bin/webpack src/js/app.js dist/bundle.js
+./node_modules/.bin/webpack --config webpack.config.js  //default
+./node_modules/.bin/webpack --config mycustom.config.js
+```
+
+```javascript
+const path=require('path');
+module.exports={
+    entry:'./src/app.js',
+    output:{
+        filename:'bundle.js',
+        path:path.resolve(__dirname,'dist')
+    }
+}
+```
 
 ## Git commands
 
+SourceTree & Bitbucket
 ```
 git init webpackdemo
 cd webpackdemo
@@ -94,4 +110,5 @@ git remote -v
 git push --help
 git remote add origin https://github.com/Strong689/webpackdemo
 git push -f origin master
+git push -f origin master --tags
 ``` 
