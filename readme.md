@@ -46,7 +46,7 @@ npm run build  //last step
 
 [issue http://127.0.0.1:8080/ vs http://localhost:8080/](https://github.com/webpack/webpack-dev-server/issues/183)
 
-````bash
+```
 npm install --save-dev webpack-dev-server  
 ```
 package.json, both works
@@ -59,7 +59,7 @@ package.json, both works
 
 ## Git commands
 
-````bash
+```
 git init webpackdemo
 cd webpackdemo
 git add .
