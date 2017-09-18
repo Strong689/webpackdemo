@@ -1,7 +1,7 @@
 
 var showSecret = false;
 
-secretButton.addEventListener('click',toggleSecreteState);
+secretButton.addEventListener('click',toggleSecretState);
 updateSecretParagraph();
 
 function toggleSecretState(){
