@@ -59,6 +59,13 @@ git tag -a v2.0 0cb7ea -m  "demo version2.0, running with webpack2"
 
 git tag
 git show v1.0
+
+git commit -a  -m "webpack dev server"
+
+git add readme.md
+git commit -m "readme.md added"
+
+git tag -a v3.0 69dcb8 -m "webpack dev server & readme.md, localhost:3000 works"
 ```
 
 * [Webpack Dev Server](https://github.com/webpack/webpack-dev-server)
