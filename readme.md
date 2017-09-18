@@ -93,5 +93,5 @@ git remote -v
 
 git push --help
 git remote add origin https://github.com/Strong689/webpackdemo
-
+git push -f origin master
 ``` 
